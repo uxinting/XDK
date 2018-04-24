@@ -1,5 +1,4 @@
 import XCTest
-import XDK
 
 class Tests: XCTestCase {
     

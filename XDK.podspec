@@ -28,13 +28,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'XDK/**/*'
+  s.source_files = 'XDK/**/*.swift'
   
   # s.resource_bundles = {
   #   'XDK' => ['XDK/Assets/*.png']
   # }
 
-  # s.public_header_files = 'XDK/**/*'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

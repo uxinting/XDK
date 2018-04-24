@@ -7,6 +7,6 @@
 
 import UIKit
 
-class XDKNavigationController : UINavigationController {
+open class XDKNavigationController : UINavigationController {
     
 }

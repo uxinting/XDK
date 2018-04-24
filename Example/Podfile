@@ -1,11 +1,6 @@
 use_frameworks!
 
 target 'XDK_Example' do
+  platform :ios, '9.0'
   pod 'XDK', :path => '../'
-
-  target 'XDK_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
