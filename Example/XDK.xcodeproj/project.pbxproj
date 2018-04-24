@@ -40,13 +40,13 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8D24823DE1A2F4B270A804FC /* Pods-XDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDK_Tests/Pods-XDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		99E11BCAE79482129F4361EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A0CA9A24F50F61336CEF2A54 /* XDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XDK.podspec; path = ../XDK.podspec; sourceTree = "<group>"; };
+		99E11BCAE79482129F4361EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A0CA9A24F50F61336CEF2A54 /* XDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XDK.podspec; path = ../XDK.podspec; sourceTree = "<group>"; };
 		C2367D3E0C178D10B05B3A50 /* Pods_XDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BEA9AECE1706F23F1A04D4 /* Pods_XDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2C4C4D7312D8A61824DA0 /* Pods-XDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDK_Example/Pods-XDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DB412C8D4D51377EBF51804E /* Pods-XDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDK_Tests/Pods-XDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F5EFE0C325FD8B9D5E26D134 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F5EFE0C325FD8B9D5E26D134 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = VW8J6NHAE7;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -517,10 +518,11 @@
 			baseConfigurationReference = 2D10E88B8FE0555A84F7AE75 /* Pods-XDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VW8J6NHAE7;
 				INFOPLIST_FILE = XDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.iyinyue.xdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -532,10 +534,11 @@
 			baseConfigurationReference = DAE2C4C4D7312D8A61824DA0 /* Pods-XDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VW8J6NHAE7;
 				INFOPLIST_FILE = XDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.iyinyue.xdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

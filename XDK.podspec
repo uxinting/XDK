@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-工具集，控件集合等
+工具集，控件集合，网络库，列表，富文本，导航器
                        DESC
 
   s.homepage         = 'https://github.com/uxinting/XDK'
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   #   'XDK' => ['XDK/Assets/*.png']
   # }
 
-  s.public_header_files = 'XDK/**/*.h'
+  # s.public_header_files = 'XDK/**/*'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
