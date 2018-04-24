@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'XDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of XDK.'
+  s.summary          = 'xinting develop kit'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+工具集，控件集合等
                        DESC
 
   s.homepage         = 'https://github.com/uxinting/XDK'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'uxinting' => 'wuxinting@baidu.com' }
+  s.author           = { 'uxinting' => 'wu.xinting@hotmail.com' }
   s.source           = { :git => 'https://github.com/uxinting/XDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'XDK/Classes/**/*'
+  s.source_files = 'XDK/**/*'
   
   # s.resource_bundles = {
   #   'XDK' => ['XDK/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.public_header_files = 'XDK/**/*.h'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
