@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XDK_Example' do
+  pod 'XDK', :path => '../'
+
+  target 'XDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
