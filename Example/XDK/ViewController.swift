@@ -13,6 +13,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let dic: NSDictionary! = [
+            "name": "wuxinting",
+            "age": 26,
+            "nickname" : "xinting"
+        ]
+        let me = Me().load(keyValues: dic)
+        print(me.dump())
     }
 
     override func didReceiveMemoryWarning() {
