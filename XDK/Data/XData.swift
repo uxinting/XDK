@@ -24,7 +24,18 @@ open class XData: EVObject {
     open func propertyMap() -> [String: String] {
         return [:]
     }
-
+    
+    open func enumPropertys() -> [(key: String, (Any?) -> (), () -> Any?)] {
+        return []
+    }
+    
+    override open func propertyConverters() -> [(key: String, decodeConverter: ((Any?) -> ()), encodeConverter: (() -> Any?))] {
+        return self.enumPropertys()
+    }
+    
+    /// 子类不可重写
+    ///
+    /// - Returns: []
     override open func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
         let map = self.propertyMap()
         var pMap = [(String?, String?)]()

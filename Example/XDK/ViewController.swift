@@ -17,7 +17,11 @@ class ViewController: UIViewController {
         let dic: NSDictionary! = [
             "name": "wuxinting",
             "age": 26,
-            "nickname" : "xinting"
+            "nickname" : "xinting",
+            "sex": 0,
+            "tst": 1,
+            "ttt": 22,
+            "nums": [40, 41]
         ]
         let me = Me.loadkv(keyValues: dic)
         print(me.dump())
