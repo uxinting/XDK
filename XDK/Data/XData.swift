@@ -6,36 +6,31 @@
 //
 
 import UIKit
-import MJExtension
+import EVReflection
 
-open class XData: NSObject {
+open class XData: EVObject {
     
-    open func load(keyValues: AnyHashable?) -> XData {
-        if let data = keyValues {
-            type(of: self).mj_setupReplacedKey { () -> [AnyHashable : Any]? in
-                let pptMap = type(of: self).propertyMap()
-                return AnyHashable(pptMap) as? [AnyHashable : Any]
-            }
-            self.mj_setKeyValues(data)
-        }
-        return self
+    open class func loadkv(keyValues: AnyHashable?) -> XData {
+        return self.init(dictionary: keyValues as! NSDictionary)
     }
     
     open func dump() -> AnyHashable {
-        return self.mj_keyValues()
+        return self.toDictionary()
     }
     
     /// 返回属性与json中属性的一一对应映射表
     ///
     /// - Returns: 映射表
-    open class func propertyMap() -> NSDictionary {
+    open func propertyMap() -> [String: String] {
         return [:]
     }
-    
-    /// 返回数组属性中的解析类名
-    ///
-    /// - Returns: 解析类名的映射
-    open class func arrayPropertyMap() -> NSDictionary {
-        return [:]
+
+    override open func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
+        let map = self.propertyMap()
+        var pMap = [(String?, String?)]()
+        for (k, v) in map {
+            pMap.append((k, v))
+        }
+        return pMap
     }
 }

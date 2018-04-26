@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             "age": 26,
             "nickname" : "xinting"
         ]
-        let me = Me().load(keyValues: dic)
+        let me = Me.loadkv(keyValues: dic)
         print(me.dump())
     }
 

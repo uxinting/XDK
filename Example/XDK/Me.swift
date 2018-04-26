@@ -10,11 +10,11 @@ import UIKit
 import XDK
 
 class Me: XData {
-    @objc open var name: NSString!
-    @objc open var age: NSNumber!
-    @objc open var nick: NSString!
+    open var name: NSString!
+    open var age: NSNumber!
+    open var nick: NSString!
 
-    override open class func propertyMap() -> NSDictionary {
+    open override func propertyMap() -> [String : String] {
         return [
             "nick" : "nickname"
         ]

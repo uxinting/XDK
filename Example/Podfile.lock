@@ -1,22 +1,24 @@
 PODS:
-  - MJExtension (3.0.13)
+  - EVReflection (5.6.1):
+    - EVReflection/Core (= 5.6.1)
+  - EVReflection/Core (5.6.1)
   - XDK (0.1.0):
-    - MJExtension (~> 3.0)
+    - EVReflection (~> 5.6)
 
 DEPENDENCIES:
   - XDK (from `../`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - MJExtension
+    - EVReflection
 
 EXTERNAL SOURCES:
   XDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  XDK: 0ad645ca39815c6a7deefc02de2a957922ff1fcf
+  EVReflection: d05ebbafc851b7a4cd3d625182662463a5819ab8
+  XDK: a5f784193a7f9709679de0b35a2ff326fe767494
 
 PODFILE CHECKSUM: b9c54133fe8d979e5b904b1739931be6b60f0201
 

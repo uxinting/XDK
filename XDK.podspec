@@ -35,6 +35,6 @@ Pod::Spec.new do |s|
   # }
 
   s.frameworks = 'UIKit'
-  s.dependency 'MJExtension', '~> 3.0'
+  s.dependency 'EVReflection', '~> 5.6'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
