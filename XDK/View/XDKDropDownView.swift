@@ -12,7 +12,6 @@ public protocol XDKDropDownViewDelegate {
     func dropDownView(_ dropDownView: XDKDropDownView!, selectIndex: Int)
 }
 
-@IBDesignable
 open class XDKDropDownView: XView, XDKMenuDelegate {
     
     @IBOutlet var view: UIView!
@@ -75,6 +74,7 @@ open class XDKDropDownView: XView, XDKMenuDelegate {
     }
     
     public func menu(menu: XDKMenu?, selectIndex: Int) {
+        optionButton.setTitle(options?[selectIndex].itemTitle!, for: .normal)
         self.delegate?.dropDownView(self, selectIndex: selectIndex)
     }
 }
