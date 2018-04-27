@@ -7,12 +7,18 @@
 
 import UIKit
 
+public protocol XDKMenuDelegate {
+    func menu(menu: XDKMenu?, selectIndex: Int)
+}
+
 public protocol XDKMenuItem {
     var itemTitle: String! { get }
 }
 
 open class XDKMenu: XView, UITableViewDataSource, UITableViewDelegate {
 
+    open var delegate: XDKMenuDelegate?
+    
     @IBOutlet var view: UIView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -61,5 +67,10 @@ open class XDKMenu: XView, UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.delegate?.menu(menu: self, selectIndex: indexPath.row)
     }
 }

@@ -8,8 +8,12 @@
 import UIKit
 import XDP
 
+public protocol XDKDropDownViewDelegate {
+    func dropDownView(_ dropDownView: XDKDropDownView!, selectIndex: Int)
+}
+
 @IBDesignable
-open class XDKDropDownView: XView {
+open class XDKDropDownView: XView, XDKMenuDelegate {
     
     @IBOutlet var view: UIView!
     
@@ -20,6 +24,9 @@ open class XDKDropDownView: XView {
             optionsMenu?.options = options
         }
     }
+    
+    open var delegate: XDKDropDownViewDelegate?
+    
     var optionsMenu: XDKMenu?
     
     open var title: String? {
@@ -37,6 +44,7 @@ open class XDKDropDownView: XView {
             optionsMenu = XDKMenu(frame: CGRect.zero)
             optionsMenu?.options = options
             optionsMenu?.isHidden = true
+            optionsMenu?.delegate = self
         }
         
         if optionsMenu?.superview != nil {
@@ -64,5 +72,9 @@ open class XDKDropDownView: XView {
         self.addSubview(view)
         
         options = []
+    }
+    
+    public func menu(menu: XDKMenu?, selectIndex: Int) {
+        self.delegate?.dropDownView(self, selectIndex: selectIndex)
     }
 }
