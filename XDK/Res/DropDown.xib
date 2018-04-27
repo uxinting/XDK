@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XDKDropDownView" customModule="XDK">
             <connections>
+                <outlet property="optionButton" destination="eAw-Me-EBz" id="s9T-eI-sIy"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ohe-iV-w3x"/>
             </connections>
         </placeholder>
@@ -21,11 +22,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAw-Me-EBz">
-                    <rect key="frame" x="0.0" y="0.0" width="801" height="114"/>
+                    <rect key="frame" x="0.0" y="0.0" width="816" height="114"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="选项">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="optionAction:" destination="-1" eventType="touchUpInside" id="JIi-NM-UD9"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_down_arrow.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFZ-9h-1hL">
                     <rect key="frame" x="801" y="0.0" width="15" height="114"/>
@@ -40,7 +44,7 @@
                 <constraint firstItem="eAw-Me-EBz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ASJ-cu-OYR"/>
                 <constraint firstItem="eAw-Me-EBz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Aqg-5f-SrH"/>
                 <constraint firstItem="XFZ-9h-1hL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ha8-LD-1DH"/>
-                <constraint firstItem="XFZ-9h-1hL" firstAttribute="leading" secondItem="eAw-Me-EBz" secondAttribute="trailing" id="d4V-Sr-M5v"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eAw-Me-EBz" secondAttribute="trailing" id="TFN-Nz-d5I"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eAw-Me-EBz" secondAttribute="bottom" id="hRJ-p2-4iY"/>
                 <constraint firstItem="XFZ-9h-1hL" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="hgK-AK-ap7"/>
             </constraints>

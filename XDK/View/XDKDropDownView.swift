@@ -9,11 +9,18 @@ import UIKit
 
 @IBDesignable
 open class XDKDropDownView: XView {
+    
     @IBOutlet var view: UIView!
+    
+    @IBOutlet weak var optionButton: UIButton!
     
     open var title: String? {
         didSet {
+            optionButton.setTitle(title, for: .normal)
         }
+    }
+    
+    @IBAction func optionAction(_ sender: Any) {
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -25,6 +32,5 @@ open class XDKDropDownView: XView {
         self.view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         self.view.frame = bounds
         self.addSubview(view)
-//        Bundle.init(path: bundlePath!)?.loadNibNamed("DropDown", owner: self, options: nil)
     }
 }
