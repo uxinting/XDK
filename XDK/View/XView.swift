@@ -9,3 +9,13 @@ import UIKit
 
 open class XView: UIView {
 }
+
+public extension Bundle {
+    public class var xdkBundle: Bundle? {
+        get {
+            let bundlePath = Bundle(for: type(of: self)).path(forResource: "XDK", ofType: "bundle")
+            let bundle = Bundle(path: bundlePath!)
+            return bundle
+        }
+    }
+}

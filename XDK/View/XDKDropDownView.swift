@@ -14,6 +14,8 @@ open class XDKDropDownView: XView {
     
     @IBOutlet weak var optionButton: UIButton!
     
+    var optionsMenu: XDKMenu?
+    
     open var title: String? {
         didSet {
             optionButton.setTitle(title, for: .normal)
@@ -21,6 +23,7 @@ open class XDKDropDownView: XView {
     }
     
     @IBAction func optionAction(_ sender: Any) {
+        
     }
     
     public required init?(coder aDecoder: NSCoder) {
