@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XDP
 
 @IBDesignable
 open class XDKDropDownView: XView {
@@ -14,6 +15,11 @@ open class XDKDropDownView: XView {
     
     @IBOutlet weak var optionButton: UIButton!
     
+    open var options: [XDKMenuItem]? {
+        didSet {
+            optionsMenu?.options = options
+        }
+    }
     var optionsMenu: XDKMenu?
     
     open var title: String? {
@@ -23,7 +29,28 @@ open class XDKDropDownView: XView {
     }
     
     @IBAction func optionAction(_ sender: Any) {
+        if (options?.count)! <= 0 {
+            return
+        }
         
+        if optionsMenu == nil {
+            optionsMenu = XDKMenu(frame: CGRect.zero)
+            optionsMenu?.options = options
+            optionsMenu?.isHidden = true
+        }
+        
+        if optionsMenu?.superview != nil {
+            optionsMenu?.isHidden = true
+            optionsMenu?.removeFromSuperview()
+        } else {
+            optionsMenu?.isHidden = false
+            
+            optionsMenu?.top = self.bottom
+            optionsMenu?.width = 70
+            optionsMenu?.height = CGFloat((options?.count)! * 40)
+            optionsMenu?.right = self.right
+            self.superview?.addSubview(optionsMenu!)
+        }
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -35,5 +62,7 @@ open class XDKDropDownView: XView {
         self.view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         self.view.frame = bounds
         self.addSubview(view)
+        
+        options = []
     }
 }

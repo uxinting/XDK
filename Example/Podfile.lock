@@ -4,9 +4,12 @@ PODS:
   - EVReflection/Core (5.6.1)
   - XDK (0.1.0):
     - EVReflection (~> 5.6)
+    - XDP (~> 0.1)
+  - XDP (0.1.0)
 
 DEPENDENCIES:
   - XDK (from `../`)
+  - XDP (from `/Users/baidu/Documents/xcodes/XDP/XDP`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -15,11 +18,14 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   XDK:
     :path: "../"
+  XDP:
+    :path: "/Users/baidu/Documents/xcodes/XDP/XDP"
 
 SPEC CHECKSUMS:
   EVReflection: d05ebbafc851b7a4cd3d625182662463a5819ab8
-  XDK: a709bfd7e094668458c00f6da2c60ab5868e6e71
+  XDK: 198d98ec93f2cd41b26dcfe9bb0e02efe2347786
+  XDP: a9fe68c1fe472962c4347fbc78e362d23278723c
 
-PODFILE CHECKSUM: b9c54133fe8d979e5b904b1739931be6b60f0201
+PODFILE CHECKSUM: bf14a869497f09fa735c82f13a3896d9bd140805
 
 COCOAPODS: 1.5.0

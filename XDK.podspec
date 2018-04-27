@@ -36,5 +36,6 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'UIKit'
   s.dependency 'EVReflection', '~> 5.6'
+  s.dependency 'XDP', '~> 0.1'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

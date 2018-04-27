@@ -3,4 +3,5 @@ use_frameworks!
 target 'XDK_Example' do
   platform :ios, '9.0'
   pod 'XDK', :path => '../'
+  pod 'XDP', :path => '/Users/baidu/Documents/xcodes/XDP/XDP'
 end
