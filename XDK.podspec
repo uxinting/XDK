@@ -30,9 +30,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'XDK/**/*.swift'
   
-  # s.resource_bundles = {
-  #   'XDK' => ['XDK/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'XDK' => ['XDK/Res/**/*']
+  }
 
   s.frameworks = 'UIKit'
   s.dependency 'EVReflection', '~> 5.6'
