@@ -24,6 +24,18 @@ open class XDKDropDownView: XView, XDKMenuDelegate {
         }
     }
     
+    open var selectedIndex: Int {
+        get {
+            if let ip = self.optionsMenu?.tableView.indexPathForSelectedRow {
+                return ip.row
+            }
+            return 0
+        }
+        set {
+            self.optionsMenu?.tableView.selectRow(at: IndexPath(row: newValue, section: 0), animated: true, scrollPosition: .none)
+        }
+    }
+    
     open var delegate: XDKDropDownViewDelegate?
     
     var optionsMenu: XDKMenu?

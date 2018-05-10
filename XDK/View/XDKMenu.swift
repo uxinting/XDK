@@ -70,7 +70,6 @@ open class XDKMenu: XView, UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         self.delegate?.menu(menu: self, selectIndex: indexPath.row)
     }
 }

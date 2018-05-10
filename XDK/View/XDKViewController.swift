@@ -14,6 +14,11 @@ open class XDKViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
 
 }
 
