@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
     'XDK' => ['XDK/Res/**/*']
   }
 
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit', 'CoreLocation'
   s.dependency 'EVReflection', '~> 5.6'
   s.dependency 'XDP', '~> 0.1'
   # s.dependency 'AFNetworking', '~> 2.3'
