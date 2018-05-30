@@ -46,18 +46,8 @@ open class XDKDropDownView: XView, XDKMenuDelegate {
         }
     }
     
-    @IBAction func optionAction(_ sender: Any) {
-        if (options?.count)! <= 0 {
-            return
-        }
-        
-        if optionsMenu == nil {
-            optionsMenu = XDKMenu(frame: CGRect.zero)
-            optionsMenu?.options = options
-            optionsMenu?.isHidden = true
-            optionsMenu?.delegate = self
-        }
-        
+    //MARK: - Private
+    private func toggleMenu() {
         if optionsMenu?.superview != nil {
             optionsMenu?.isHidden = true
             optionsMenu?.removeFromSuperview()
@@ -70,6 +60,21 @@ open class XDKDropDownView: XView, XDKMenuDelegate {
             optionsMenu?.right = self.right
             self.superview?.addSubview(optionsMenu!)
         }
+    }
+    
+    @IBAction func optionAction(_ sender: Any) {
+        if (options?.count)! <= 0 {
+            return
+        }
+        
+        if optionsMenu == nil {
+            optionsMenu = XDKMenu(frame: CGRect.zero)
+            optionsMenu?.options = options
+            optionsMenu?.isHidden = true
+            optionsMenu?.delegate = self
+        }
+        
+        self.toggleMenu()
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -88,5 +93,6 @@ open class XDKDropDownView: XView, XDKMenuDelegate {
     public func menu(menu: XDKMenu?, selectIndex: Int) {
         optionButton.setTitle(options?[selectIndex].itemTitle!, for: .normal)
         self.delegate?.dropDownView(self, selectIndex: selectIndex)
+        self.toggleMenu()
     }
 }
